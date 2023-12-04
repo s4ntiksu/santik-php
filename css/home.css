@@ -1,0 +1,675 @@
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+html {
+  font-family: 'Product Sans', sans-serif;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+    -ms-overscroll-behavior: contain; /* для Internet Explorer */
+  overscroll-behavior: contain;
+  overscroll-behavior-y: contain;
+}
+body {
+  background-color: #1B1C18;
+  font-family: 'Product Sans', sans-serif;
+  margin: 0;
+    width: 100%;
+	height: 100%;
+}
+
+.content {
+  margin-top: 70px;
+}
+header {
+  width: 100%;
+         height: 65px;
+        background-color: #1b1c189f;
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: opened 2s;
+}
+@keyframes opened {
+  0% {
+    transform: translateY(-100%) ;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+header h1 {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 1px;
+  margin-left: 15px;
+  font-size: 25px;
+   color: #C9EE9E;
+}
+a {
+  color: #CFCEC8;
+  z-index: 9999999;
+  cursor: pointer;
+}
+h1 {
+  color: white;
+  font-size: 30px;
+  margin: 5px 0 5px auto;
+}
+.button img {
+  width: 32px;
+  height: 32px;
+  margin-right: auto;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.button span {
+  font-size: 16px;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-left: 2px;
+}
+.container {
+  border-radius: 20px;
+  background-color: #23261E;
+  padding: 15px;
+  height: auto;
+  width: 350px;
+  margin: auto;
+  margin-top: 10px;
+  animation-name: start;
+  animation-duration: 1s;
+  color: #E4E3DD;
+}
+.container-me {  
+  border-radius: 20px; /* значение может быть любым, указывает радиус скругления углов */
+  background-color: #23261E; /* укажите любой цвет фона для контейнера */
+  padding: 15px; /* настройте внутренние отступы по вашему выбору */
+  height: auto;
+  width: 350px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  animation-name: start-me;
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
+  pointer-events: auto;
+}
+@keyframes start-me {
+  0% {
+    transform: translateY(-400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+  .container-me #avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #6D7264;
+    overflow: hidden;
+  }
+.container-me #text h1 {
+  flex: 1;
+  color: #E4E3DD;
+  margin: auto;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.container-me #text p {
+  color: gray;
+  margin: auto;
+  flex: 2;
+  margin-left: 10px;
+  font-size: 14px;
+}
+footer {
+  background-color: #6D7264;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  color: whitesmoke;
+}
+.green {
+  color: #4cff24;
+}
+
+lottie-player {
+  margin: 0 auto;
+  z-index: -1;
+}
+ .nowplayingcard {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  width: auto;
+  margin: auto;
+  font-size: 13px;
+}
+
+.nowplayingcard .nowplayingcontainer-inner  {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #657251;
+  animation: transition 0.5s ease-in-out;
+}
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nowplayingcard .nowplayingcontainer-inner img#trackart {
+  max-width: 100px;
+  float: left;
+  left: 0;
+   z-index: 3;
+}
+.nowplayingcard .nowplayingcontainer-inner .trackInfo {
+  width: 60%;
+  float: left;
+}
+.nowplayingcard .nowplayingcontainer-inner .trackInfo a {
+  max-width: 100%;
+  display: block;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ .nowplayingcard .nowplayingcontainer-inner .trackInfo a:nth-child(odd) {
+  color: white;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+.nowplayingcard .nowplayingcontainer-inner .trackInfo a:nth-child(even) {
+  color: #cddbb8;
+  font-size: 14px;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+.nowplayingcard .nowplayingcontainer-inner .trackInfo a:nth-child(even) img {
+  width: 15px;
+  height: 15px;
+  margin: 2% 1px 0 5%;
+  border-radius: 50%;
+}
+img#trackart {
+  border-radius: 20px;
+  display: flex;
+  height: auto;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+   animation-name: cover;
+  animation-duration: 5s;
+  padding: 2px;
+  background: #6D7264;
+}
+
+#link img {
+  height: 30px;
+  width: 30px;
+}
+.container-lastfm {
+  border-radius: 20px; /* значение может быть любым, указывает радиус скругления углов */
+  background-color: #1B1C18; /* укажите любой цвет фона для контейнера */
+  padding: 15px; /* настройте внутренние отступы по вашему выбору */
+  border: 1px solid #6D7264;
+  height: auto;
+  width: 350px;
+  margin: auto;
+  margin-top: 10px;
+  animation-name: start;
+  animation-duration: 1s;
+  flex-wrap: wrap;
+  pointer-events: auto;
+}
+@keyframes rotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+      background-position: 50% 50%
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+      background-position: 50% 50%
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes start {
+  0% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.icon img {
+  height: 25px;
+  width: 25px;
+  margin-top: 10px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+p {
+  color: white;
+  font-size: 14px;
+  margin: auto;
+}
+i {
+  color: white;
+}
+#vk:hover {
+  transition: ease-in-out;
+  background: #0077FF;
+}
+#donate:hover {
+  transition: ease-in-out;
+  background: #b317fc;
+}
+#tg:hover {
+  background: #0090FF;
+}
+#mstdn:hover {
+  background: blue;
+}
+#yt:hover {
+  background: red;
+}
+.code-space {
+  padding: 20px;
+  background-color: #373737;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  
+  
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: Mono;
+  color: white;
+  word-wrap: break-word;
+}
+.blinking-cursor {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  animation: blink 1s infinite;
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+@keyframes blink {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+code {
+  color: white;
+}/* This is not related to ripple effect.
+If you want to use this ripple effect on your projects, this section shouldn't copy.*/
+
+.txt {
+  color: #ffffff;
+  font-family: sans-serif;
+  margin-bottom: 2rem;
+}
+.title_txt {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.desc_txt {
+  letter-spacing: 0.1rem;
+  line-height: 1.9rem;
+  margin-bottom: 3rem;
+}
+
+/* for button */
+.btn {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.8rem 3.5rem;
+  background: #363636;
+  text-decoration: none;
+  color: #ffffffbb;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #303030;
+}
+.btn_active {
+  background: #292929 !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+.btn2 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.8rem 3.5rem;
+  background: #0073ff33 !important;
+  text-decoration: none;
+  color: #ffffffbb;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  margin-top: 1rem;
+}
+.btn3 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.8rem 3.5rem;
+  background: transparent !important;
+  text-decoration: none;
+  color: #63c3ff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  margin-top: 1rem;
+  border: solid 1px #ffffff66;
+}
+.btn4 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.8rem 3.5rem;
+  background: transparent !important;
+  text-decoration: none;
+  color: #ffffffbb;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  margin-top: 1rem;
+}
+
+/*needed for ripple effect.
+An object which has class of .for_ripple is applied ripple effect.*/
+.ripple {
+  position: absolute;
+  /* background: radial-gradient(#ffffff45, #ffffff00); */
+  border-radius: 10px;
+  z-index: 10;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+}
+.for_ripple {
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: 0.03s;
+}
+.email-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 5px;
+  background: #324F10 !important;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+.email-button span {
+  animation: email 1s infinite;
+  color: #C9EE9E;
+  pointer-events: none;
+}
+@keyframes email {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: scale(1) rotateZ(9deg);
+  }
+  50% {
+    transform: scale(1.2) rotateZ(-9deg);
+  }
+  75% {
+    transform: scale(1) rotateZ(9deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.btnlang {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent !important;
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  pointer-events: auto;
+  z-index: 99999;
+  right: 10px;
+  top: 8px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  position: fixed;
+}
+.btlang:hover {
+  color: whitesmoke;
+}
+.btnlang span {
+  color: #C9EE9E;
+  pointer-events: none;
+}
+
+.btnlang {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent !important;
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  pointer-events: auto;
+  z-index: 99999;
+  right: 10px;
+  top: 8px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  position: fixed;
+}
+.interactive-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px 30px;
+  background: #C9EE9E !important;
+  text-decoration: none;
+  color: #2C470E;
+  font-family: sans-serif;
+  font-size: 18px;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  margin-top: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: 'Product Sans', sans-serif;
+}
+.link {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 5px;
+  padding: 1px 1px;
+  background: transparent !important;
+  text-decoration: none;
+  color: #ffffffbb;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  display: inline-block;
+  font-size: 14px;
+  margin: auto;
+  font-family: 'Product Sans', sans-serif;
+}
+.my-custom-container {
+    max-width: 400px; /* задает максимальную ширину контейнера */
+    margin: 0 auto; /* выравнивает контейнер по центру страницы */
+    /* другие стили для контейнера */
+}
+#splashscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1B1C18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: fadeOut 5s ease-in-out forwards;
+  z-index: 9999999;
+}
+
+.logo {
+  /* настройте размер и расположение логотипа */
+  /* например: */
+  width: 200px;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animation {
+  /* настройте размер и расположение анимации */
+  /* например: */
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+
+        
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            98% {
+              opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+       
+       .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #1B1C18;
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+}
